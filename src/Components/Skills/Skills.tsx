@@ -36,7 +36,7 @@ export const Skills: React.FC = () => {
           <li>Creative Thinking</li>
         </ul>
         <div className="certification">
-          <p>I have completed a workshop on <strong>Effective Communication</strong> and have participated in many other workshops to improve my soft skills.</p>
+          <p>I have completed many workshops to improve my soft skills.</p>
         </div>
       </div>
     </div>

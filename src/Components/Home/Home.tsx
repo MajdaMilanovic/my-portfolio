@@ -24,7 +24,7 @@ export const Home: React.FC = () => {
         <p className="intro-text">
           I am a software developer specializing in front-end and back-end
           technologies. I love building impactful projects and solving real-world
-          problems. Scroll down to explore my projects, skills, and journey.
+          problems. You can explore my projects, skills, and journey here.
         </p>
       </section>
 

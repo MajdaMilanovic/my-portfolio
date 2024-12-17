@@ -1,84 +1,95 @@
-/* src/Components/Home.css */
+/* General Container */
 .home-container {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    color: #333;
+    color: #f4f4f4;
     padding: 0;
     margin: 0;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Dark blue gradient */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/* Hero Section */
 .hero-section {
     padding: 60px 20px;
 }
 
 .hero-title {
     font-size: 3rem;
-    color: #fff;
+    color: #f1f1f1;
     margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
 }
 
 .highlight {
-    color: #ffe600;
+    color: #ffc107;
+    /* Golden highlight */
     text-shadow: 2px 2px #000;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: #f0f0f0;
+    font-size: 1.3rem;
+    color: #d9e6ff;
+    /* Light bluish-gray */
     margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out;
 }
 
+/* Call-to-Action Button */
 .cta-button {
     text-decoration: none;
-    background: #fff;
-    color: #ff007a;
-    padding: 10px 20px;
+    background: #ffc107;
+    color: #333;
+    padding: 12px 25px;
     border-radius: 25px;
     font-weight: bold;
-    transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button:hover {
+    background: #ffcd38;
     transform: scale(1.1);
-    background: #ffe600;
+    color: #000;
 }
 
+/* Intro Section */
 .intro-section {
     padding: 40px 20px;
-    background: #fff;
+    background: #f9f9f9;
     box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px 20px 0 0;
+    animation: fadeIn 1.2s ease-in;
 }
 
 .section-title {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #2a5298;
 }
 
 .intro-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
+/* Footer Section */
 .footer {
     padding: 20px;
     font-size: 0.9rem;
     color: #fff;
-    background: #333;
-    border-top: 2px solid #ffe600;
+    background: #1e3c72;
+    border-top: 2px solid #ffc107;
+    animation: fadeIn 1.5s ease;
 }
 
 .footer p {
     margin: 0;
-    animation: fadeIn 1.5s ease;
 }
 
 /* Animations */
@@ -91,5 +102,59 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .intro-text {
+        font-size: 1rem;
     }
 }

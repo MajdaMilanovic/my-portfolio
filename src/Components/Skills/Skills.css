@@ -1,50 +1,100 @@
-/* styles.css */
+/* Skills Container */
 .skills-container {
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    max-width: 800px;
+    padding: 50px 20px;
+    max-width: 1000px;
     margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 .skills-container h2 {
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    position: relative;
 }
 
+.skills-container h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+/* Skills Section */
 .skills-section {
     margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-section:hover {
+    transform: scale(1.02);
 }
 
 .skills-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     color: #2c3e50;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-.skills-section ul {
-    list-style-type: none;
+.skills-list {
+    list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
-.skills-section li {
-    font-size: 1.1rem;
-    color: #34495e;
-    margin-bottom: 5px;
-}
-
-.certification {
-    background-color: #f4f4f9;
+.skills-list li {
+    background-color: #3498db;
+    color: #fff;
     padding: 10px;
-    margin-top: 10px;
-    border-left: 5px solid #2ecc71;
-    color: #2c3e50;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.certification p {
-    margin: 0;
+.skills-list li:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
 }
 
-.certification strong {
-    color: #e74c3c;
+/* Note for Soft Skills */
+.skills-note {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
