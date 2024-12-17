@@ -63,6 +63,13 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s ease-in-out;
 }
+img {
+    width: 200px;
+    /* or your preferred size */
+    height: auto;
+    border-radius: 50%;
+    /* Optional: to make it a circle */
+}
 
 .about-image img:hover {
     transform: scale(1.05);

@@ -23,10 +23,6 @@ export const About: React.FC = () => {
           </p>
         </div>
         <div className="about-image">
-          <img
-            src="your-profile-image.jpg"
-            alt="Your Name"
-          />
         </div>
       </div>
       <div className="about-achievements">
